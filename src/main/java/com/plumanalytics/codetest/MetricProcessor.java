@@ -19,7 +19,7 @@ public class MetricProcessor {
 
   public static void main(String args[]) {
     try {
-      URL url = MetricProcessor.class.getResource("/test-data");
+      URL url = MetricProcessor.class.getResource("/resource/test-data");
       File testDataDir = new File(url.toURI());
       MetricProcessor processor = new MetricProcessor(testDataDir);
       processor.run();
