@@ -36,7 +36,7 @@ public class TestMetricPublisher implements MetricPublisher {
     aggrCountInstance.addCounts(metricMessage.getCount1(), metricMessage.getCount2(), metricMessage.getCount3());
   }
 
-  public MetricMessage createMessage(String line) throws ParseException {
+  public synchronized MetricMessage createMessage(String line) throws ParseException {
     MetricMessage message = new TestMetricMessage();
     message.init(line);
     return message;

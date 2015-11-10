@@ -17,7 +17,7 @@ public class TestMetricMessage implements MetricMessage {
   private int count3;
 
   @Override
-  public void init(String line) throws ParseException {
+  public synchronized void init(String line) throws ParseException {
     String [] split = line.split("\\t");
     metricDate = METRIC_DATE_FORMAT.parse(split[0]);
     id = split[1];
